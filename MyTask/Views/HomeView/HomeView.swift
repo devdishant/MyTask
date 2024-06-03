@@ -9,9 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject var taskViewModel: TaskViewModel = TaskViewModel()
+    @StateObject var taskViewModel: TaskViewModel = TaskViewModel()
     @State private var pickerFilters: [String] = ["Active", "Complated"]
     @State private var defaultpickerSelectedItem: String = "Active"
+    @State private var showAddTaskView: Bool = false
 
     var body: some View {
         
@@ -44,11 +45,15 @@ struct HomeView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        print("add Task view")
+                        showAddTaskView = true
                     } label: {
                         Image(systemName: "plus")
                     }
                 }
+            }
+            .sheet(isPresented: $showAddTaskView) {
+                AddTaskView(taskModel: taskViewModel, 
+                            showAddTaskView: $showAddTaskView)
             }
         }
     }

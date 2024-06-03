@@ -11,6 +11,7 @@ struct AddTaskView: View {
     
     @ObservedObject var taskModel: TaskViewModel
     @State private var taskToAdd: Task = Task(id: 0, name: "", description: "", isActive: false, finishDate: Date())
+    @Binding var showAddTaskView: Bool
     
     var body: some View {
         NavigationStack {
@@ -27,7 +28,7 @@ struct AddTaskView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button {
-                            print("Cancel button tapped")
+                            showAddTaskView = false
                         } label: {
                             Text("Cancel")
                         }
@@ -45,5 +46,5 @@ struct AddTaskView: View {
 }
 
 #Preview {
-    AddTaskView(taskModel: TaskViewModel())
+    AddTaskView(taskModel: TaskViewModel(), showAddTaskView: .constant(false))
 }
