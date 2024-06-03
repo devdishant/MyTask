@@ -17,6 +17,8 @@
 		171A39052C0E39E10096B852 /* MyTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171A39042C0E39E10096B852 /* MyTaskUITestsLaunchTests.swift */; };
 		171A39132C0E43C60096B852 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171A39122C0E43C60096B852 /* Task.swift */; };
 		171A39162C0E45D50096B852 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171A39152C0E45D50096B852 /* TaskViewModel.swift */; };
+		171A391A2C0E4A470096B852 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171A39192C0E4A470096B852 /* HomeView.swift */; };
+		171A391D2C0E4C270096B852 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171A391C2C0E4C270096B852 /* DateExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		171A39042C0E39E10096B852 /* MyTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		171A39122C0E43C60096B852 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		171A39152C0E45D50096B852 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		171A39192C0E4A470096B852 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		171A391C2C0E4C270096B852 /* DateExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 		171A38E12C0E39E00096B852 /* MyTask */ = {
 			isa = PBXGroup;
 			children = (
+				171A391B2C0E4C090096B852 /* Extention */,
+				171A39172C0E4A250096B852 /* Views */,
 				171A39142C0E45C10096B852 /* ViewModel */,
 				171A39112C0E43AF0096B852 /* Model */,
 				171A38E22C0E39E00096B852 /* MyTaskApp.swift */,
@@ -150,6 +156,30 @@
 				171A39152C0E45D50096B852 /* TaskViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		171A39172C0E4A250096B852 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				171A39182C0E4A2C0096B852 /* HomeView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		171A39182C0E4A2C0096B852 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				171A39192C0E4A470096B852 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		171A391B2C0E4C090096B852 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				171A391C2C0E4C270096B852 /* DateExtention.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +315,8 @@
 				171A39132C0E43C60096B852 /* Task.swift in Sources */,
 				171A38EF2C0E39E10096B852 /* MyTask.xcdatamodeld in Sources */,
 				171A38EC2C0E39E10096B852 /* Persistence.swift in Sources */,
+				171A391D2C0E4C270096B852 /* DateExtention.swift in Sources */,
+				171A391A2C0E4A470096B852 /* HomeView.swift in Sources */,
 				171A39162C0E45D50096B852 /* TaskViewModel.swift in Sources */,
 				171A38E32C0E39E00096B852 /* MyTaskApp.swift in Sources */,
 			);

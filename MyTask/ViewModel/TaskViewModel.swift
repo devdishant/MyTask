@@ -8,9 +8,9 @@
 import Foundation
 
 final class TaskViewModel : ObservableObject {
-    @Published var task: [Task] = []
+    @Published var tasks: [Task] = []
     
     func getTasks(isActive: Bool) {
-        task = Task.createMockTasks().filter({$0.isActive == isActive})
+        tasks = Task.createMockTasks().filter({$0.isActive == isActive})
     }
 }
