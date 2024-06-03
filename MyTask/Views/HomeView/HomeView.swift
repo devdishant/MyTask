@@ -40,6 +40,16 @@ struct HomeView: View {
                 taskViewModel.getTasks(isActive: true)
             }.listStyle(.plain)
             .navigationTitle("Home")
+            
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        print("add Task view")
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
         }
     }
 }

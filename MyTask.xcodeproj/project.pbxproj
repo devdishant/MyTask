@@ -19,6 +19,7 @@
 		171A39162C0E45D50096B852 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171A39152C0E45D50096B852 /* TaskViewModel.swift */; };
 		171A391A2C0E4A470096B852 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171A39192C0E4A470096B852 /* HomeView.swift */; };
 		171A391D2C0E4C270096B852 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171A391C2C0E4C270096B852 /* DateExtention.swift */; };
+		171A39202C0E6D4C0096B852 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171A391F2C0E6D4C0096B852 /* AddTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		171A39152C0E45D50096B852 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		171A39192C0E4A470096B852 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		171A391C2C0E4C270096B852 /* DateExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
+		171A391F2C0E6D4C0096B852 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		171A39172C0E4A250096B852 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				171A391E2C0E6D3A0096B852 /* AddTaskView */,
 				171A39182C0E4A2C0096B852 /* HomeView */,
 			);
 			path = Views;
@@ -180,6 +183,14 @@
 				171A391C2C0E4C270096B852 /* DateExtention.swift */,
 			);
 			path = Extention;
+			sourceTree = "<group>";
+		};
+		171A391E2C0E6D3A0096B852 /* AddTaskView */ = {
+			isa = PBXGroup;
+			children = (
+				171A391F2C0E6D4C0096B852 /* AddTaskView.swift */,
+			);
+			path = AddTaskView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +326,7 @@
 				171A39132C0E43C60096B852 /* Task.swift in Sources */,
 				171A38EF2C0E39E10096B852 /* MyTask.xcdatamodeld in Sources */,
 				171A38EC2C0E39E10096B852 /* Persistence.swift in Sources */,
+				171A39202C0E6D4C0096B852 /* AddTaskView.swift in Sources */,
 				171A391D2C0E4C270096B852 /* DateExtention.swift in Sources */,
 				171A391A2C0E4A470096B852 /* HomeView.swift in Sources */,
 				171A39162C0E45D50096B852 /* TaskViewModel.swift in Sources */,
