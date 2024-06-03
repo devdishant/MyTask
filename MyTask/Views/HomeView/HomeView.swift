@@ -10,10 +10,21 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var taskViewModel: TaskViewModel = TaskViewModel()
-    
+    @State private var pickerFilters: [String] = ["Active", "Complated"]
+    @State private var defaultpickerSelectedItem: String = "Active"
+
     var body: some View {
         
         NavigationStack {
+            
+            Picker("Picker Filter", selection: $defaultpickerSelectedItem) {
+                ForEach(pickerFilters, id:\.self) {
+                    Text($0)
+                }
+            }.pickerStyle(.segmented)
+                .onChange(of: defaultpickerSelectedItem) { newValue in
+                    taskViewModel.getTasks(isActive: defaultpickerSelectedItem == "Active")
+                }
             
             List(taskViewModel.tasks, id: \.id) { task in
                 VStack(alignment: .leading) {
@@ -24,7 +35,6 @@ struct HomeView: View {
                         Spacer()
                         Text("\(task.finishDate.toString())")
                     }
-                    
                 }
             }.onAppear {
                 taskViewModel.getTasks(isActive: true)
