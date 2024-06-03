@@ -10,7 +10,7 @@ import SwiftUI
 struct AddTaskView: View {
     
     @ObservedObject var taskModel: TaskViewModel
-    @State private var taskToAdd: Task = Task(id: 0, name: "", description: "", isActive: false, finishDate: Date())
+    @State private var taskToAdd: Task = Task(id: 0, name: "", description: "", isCompleted: false, finishDate: Date())
     @Binding var showAddTaskView: Bool
     
     var body: some View {

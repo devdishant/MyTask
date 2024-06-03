@@ -13,7 +13,9 @@ struct HomeView: View {
     @State private var pickerFilters: [String] = ["Active", "Complated"]
     @State private var defaultpickerSelectedItem: String = "Active"
     @State private var showAddTaskView: Bool = false
-
+    @State private var showTaskDetailView: Bool = false
+    @State private var selectedTask: Task = Task(id: 0, name: "", description: "", isCompleted: false, finishDate: Date())
+    
     var body: some View {
         
         NavigationStack {
@@ -36,8 +38,13 @@ struct HomeView: View {
                         Spacer()
                         Text("\(task.finishDate.toString())")
                     }
+                }.onTapGesture {
+                    selectedTask = task
+                    showTaskDetailView.toggle()
+                    
                 }
-            }.onAppear {
+            }
+            .onAppear {
                 taskViewModel.getTasks(isActive: true)
             }.listStyle(.plain)
             .navigationTitle("Home")
@@ -54,6 +61,9 @@ struct HomeView: View {
             .sheet(isPresented: $showAddTaskView) {
                 AddTaskView(taskModel: taskViewModel, 
                             showAddTaskView: $showAddTaskView)
+            }
+            .sheet(isPresented: $showTaskDetailView) {
+                TaskDetailView(taskModel: taskViewModel, showTaskDetailView: $showTaskDetailView, selectedTask: $selectedTask)
             }
         }
     }
